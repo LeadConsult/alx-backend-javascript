@@ -7,6 +7,7 @@ export function taskFirst() {
     return ' is okay';
   }
   
+  
   export function taskNext() {
     var combination = 'But sometimes let';
     combination += getLast();
