@@ -14,5 +14,3 @@ export function taskFirst() {
   
     return combination;
   }
-
-  console.log(`${taskFirst()} ${taskNext()}`);
