@@ -1,3 +1,7 @@
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable max-classes-per-file */
+
+// define the HolbertonClass
 export class HolbertonClass {
   constructor(year, location) {
     this._year = year;
@@ -13,6 +17,7 @@ export class HolbertonClass {
   }
 }
 
+// define the StudentHolberton class
 export class StudentHolberton {
   constructor(firstName, lastName, holbertonClass) {
     this._firstName = firstName;
@@ -29,17 +34,20 @@ export class StudentHolberton {
   }
 
   get fullStudentDescription() {
-    return `${this._firstName} ${this._lastName} - ${this._holbertonClass.year} - ${this._holbertonClass.location}`;
+    return `${this.fullName} - ${this.holbertonClass.year} - ${this.holbertonClass.location}`;
   }
 }
 
-const class2019 = new HolbertonClass(2019, 'San Francisco');
-const class2020 = new HolbertonClass(2020, 'San Francisco');
+// create some instances of the classes
+const class2021 = new HolbertonClass(2021, 'San Francisco');
+const class2022 = new HolbertonClass(2022, 'New York');
 
-const student1 = new StudentHolberton('Guillaume', 'Salva', class2020);
-const student2 = new StudentHolberton('John', 'Doe', class2020);
-const student3 = new StudentHolberton('Albert', 'Clinton', class2019);
-const student4 = new StudentHolberton('Donald', 'Bush', class2019);
-const student5 = new StudentHolberton('Jason', 'Sandler', class2019);
+const student1 = new StudentHolberton('Alice', 'Smith', class2021);
+const student2 = new StudentHolberton('Bob', 'Johnson', class2021);
+const student3 = new StudentHolberton('Charlie', 'Brown', class2022);
 
-export default [student1, student2, student3, student4, student5];
+// create an array of the students
+const listOfStudents = [student1, student2, student3];
+
+// export the array of the students as default
+export default listOfStudents;

@@ -1,4 +1,3 @@
-/* eslint-disable class-methods-use-this */
 import Car from './10-car';
 
 export default class EVCar extends Car {
@@ -7,7 +6,11 @@ export default class EVCar extends Car {
     this._range = range;
   }
 
+  /**
+   * Creates and returns a new instance of EVCar with the same properties.
+   * @returns {EVCar} A new instance of EVCar with the same properties.
+   */
   cloneCar() {
-    return new Car();
+    return new EVCar(this._brand, this._motor, this._color, this._range);
   }
 }
