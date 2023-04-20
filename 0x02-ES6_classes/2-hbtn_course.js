@@ -6,7 +6,10 @@ export default class HolbertonCourse {
 
     this._name = name;
     this._length = length;
-    this._students = students;
+    this._students = students.map((student) => {
+      if (typeof student !== 'string') throw new TypeError('students must be an array of strings');
+      return student;
+    });
   }
 
   get name() {
@@ -33,6 +36,9 @@ export default class HolbertonCourse {
 
   set students(val) {
     if (!Array.isArray(val)) throw new TypeError('students type must be an Array');
-    this._students = val;
+    this._students = val.map((student) => {
+      if (typeof student !== 'string') throw new TypeError('students must be an array of strings');
+      return student;
+    });
   }
 }
