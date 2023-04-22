@@ -1,14 +1,7 @@
 /* eslint-disable radix */
 export default function iterateThroughObject(reportWithIterator) {
-  let output = '';
-
-  for (const [index, item] of Object.entries(reportWithIterator)) {
-    output += `${item}`;
-
-    if (parseInt(index) !== reportWithIterator.length - 1) {
-      output += ' | ';
-    }
-  }
-
-  return output;
+  return Array.from(reportWithIterator, employee => `${employee.firstName} ${employee.lastName}`).join(' | ');
 }
+// This function iterates through the reportWithIterator object using the Array.from method, 
+// maps each employee object to a string containing the first name and last name, 
+// and then joins the strings using a pipe separator.
