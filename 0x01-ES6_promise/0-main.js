@@ -1,4 +1,5 @@
-import getResponseFromAPI from "./0-promise.js";
+import guardrail from './9-try.js';
+import divideFunction from './8-try.js';
 
-const response = getResponseFromAPI();
-console.log(response instanceof Promise);
+console.log(guardrail(() => { return divideFunction(10, 2)}));
+console.log(guardrail(() => { return divideFunction(10, 0)}));
