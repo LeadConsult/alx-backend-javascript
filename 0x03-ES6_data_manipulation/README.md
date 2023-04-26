@@ -3,10 +3,10 @@
 ## Resources
 Read or watch:
 
-Array
-Typed Array
-Set Data Structure
-Map Data Structure
+Array <br>
+Typed Array <br>
+Set Data Structure <br>
+Map Data Structure <br>
 WeakMap
 
 
