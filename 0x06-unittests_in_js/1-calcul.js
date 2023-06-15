@@ -1,19 +1,19 @@
 function calculateNumber(type, a, b) {
-  const anum = Math.round(a);
-  const bnum = Math.round(b);
+  const a_num = Math.round(a);
+  const b_num = Math.round(b);
   let c = 0;
   switch (type) {
   case 'SUM':
-c = anum + bnum;
+c = a_num + b_num;
 break;
   case 'SUBTRACT':
-c = anum - bnum;
+c = a_num - b_num;
 break;
   case 'DIVIDE':
-    if (bnum === 0) {
+    if (b_num === 0) {
           c = "Error";
     } else {
-          c = anum / bnum;
+          c = a_num / b_num;
     }
     break;
   }
